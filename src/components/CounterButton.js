@@ -1,3 +1,13 @@
-<button className="CounterButton">
-You clicked me X amount of times
-</button>
+import { useState } from "react";
+
+function CounterButton(props){
+  const [clickAmount, setClickAmount] = useState(startingValue);
+  startingValue = 0
+  return (
+    <button className="CounterButton">
+    You clicked me {clickAmount} times
+  </button>
+  );
+}
+
+export default CounterButton;
